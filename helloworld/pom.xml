@@ -60,14 +60,13 @@
 				<version>2.0</version>
 				<configuration>
 					<muleVersion>3.8.5</muleVersion>
-					<application>helloworld.zip</application>
 					<username>smarthala</username>
 					<password>@Boston2018</password>
 					<deploymentType>cloudhub</deploymentType>
 					<redeploy>true</redeploy>
-					<applicationName>${artifactId}</applicationName>
+					<!-- <applicationName>${artifactId}</applicationName> -->
 					<environment>DM</environment>
-					<url>anypoint.mulesoft.com/cloudhub</url>
+					<!-- <url>anypoint.mulesoft.com/cloudhub</url> -->
 					<workerType>Micro</workerType>
 					<workers>1</workers>
 				</configuration>
@@ -189,6 +188,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+        <id>mule-public</id>
+        <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+    </pluginRepository>
     </pluginRepositories>
 
 </project>
