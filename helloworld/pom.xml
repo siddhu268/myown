@@ -54,6 +54,33 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<muleVersion>3.8.5</muleVersion>
+					<!-- <application>${artifactLocation}/${artifactId}-${version}.zip</application> -->
+					<username>smarthala</username>
+					<password>@Boston2018</password>
+					<deploymentType>cloudhub</deploymentType>
+					<redeploy>true</redeploy>
+					<applicationName>${artifactId}</applicationName>
+					<environment>DM</environment>
+					<url>anypoint.mulesoft.com/cloudhub</url>
+					<workerType>Micro</workerType>
+					<workers>1</workers>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
