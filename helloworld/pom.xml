@@ -79,13 +79,13 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 			     <groupId>org.apache.maven.plugins</groupId>
 			     <artifactId>maven-deploy-plugin</artifactId>
 			     <configuration>
 			         <skip>true</skip>
 			     </configuration>
-			 </plugin>
+			 </plugin> -->
 		</plugins>
 	</build>
 
@@ -200,5 +200,14 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+  <distributionManagement>
+    <snapshotRepository>
+        <id>my-mule-repo</id>
+	    <url>http://ec2-34-234-79-248.compute-1.amazonaws.com:8082/nexus/content/repositories/my-mule-repo</url>
+	</snapshotRepository>
+    <repository>
+	    <id>my-mule-repo</id>
+	    <url>http://ec2-34-234-79-248.compute-1.amazonaws.com:8082/nexus/content/repositories/my-mule-repo</url>
+	</repository>
+  </distributionManagement>
 </project>
