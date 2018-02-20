@@ -202,11 +202,11 @@
     </pluginRepositories>
   <distributionManagement>
     <snapshotRepository>
-        <id>my-mule-repo</id>
+        <id>nexus-snapshots</id>
 	    <url>http://ec2-34-234-79-248.compute-1.amazonaws.com:8082/nexus/content/repositories/my-mule-repo</url>
 	</snapshotRepository>
     <repository>
-	    <id>my-mule-repo</id>
+	    <id>nexus-releases</id>
 	    <url>http://ec2-34-234-79-248.compute-1.amazonaws.com:8082/nexus/content/repositories/my-mule-repo</url>
 	</repository>
   </distributionManagement>
