@@ -65,7 +65,7 @@
 					<deploymentType>cloudhub</deploymentType>
 					<redeploy>true</redeploy>
 					<!-- <applicationName>${artifactId}</applicationName> -->
-					<environment>DM</environment>
+					<environment>CloudPractice</environment>
 					<workerType>Micro</workerType>
 					<workers>1</workers>
 				</configuration>
