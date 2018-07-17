@@ -203,11 +203,11 @@
   <distributionManagement>
     <snapshotRepository>
         <id>nexus-snapshots</id>
-	    <url>http://ec2-18-222-112-226.us-east-2.compute.amazonaws.com:443/nexus/content/repositories/my-mule-repo</url>
+	    <url>http://ec2-18-191-192-51.us-east-2.compute.amazonaws.com:443/nexus/content/repositories/my-mule-repo</url>
 	</snapshotRepository>
     <repository>
 	    <id>nexus-releases</id>
-	    <url>http://ec2-18-222-112-226.us-east-2.compute.amazonaws.com:443/nexus/content/repositories/my-mule-repo</url>
+	    <url>http://ec2-18-191-192-51.us-east-2.compute.amazonaws.com:443/nexus/content/repositories/my-mule-repo</url>
 	</repository>
   </distributionManagement>
 </project>
