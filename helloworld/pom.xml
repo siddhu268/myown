@@ -60,12 +60,12 @@
 				<version>2.0</version>
 				<configuration>
 					<muleVersion>3.8.5</muleVersion>
-					<username>vibsharma</username>
-					<password>Soumya92!!</password>
+					<username>siddhu268</username>
+					<password>!QAZ1qaz</password>
 					<deploymentType>cloudhub</deploymentType>
 					<redeploy>true</redeploy>
 					<!-- <applicationName>${artifactId}</applicationName> -->
-					<environment>CloudPractice</environment>
+					<environment>Production</environment>
 					<workerType>Micro</workerType>
 					<workers>1</workers>
 				</configuration>
