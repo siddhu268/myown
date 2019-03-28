@@ -64,7 +64,7 @@
 					<password>Karthik123@Deloitte</password>
 					<deploymentType>cloudhub</deploymentType>
 					<redeploy>true</redeploy>
-					<!-- <applicationName>${artifactId}</applicationName> -->
+					<applicationName>${artifactId}</applicationName>
 					<environment>Development</environment>
 					<workerType>Micro</workerType>
 					<workers>1</workers>
