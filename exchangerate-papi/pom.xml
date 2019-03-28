@@ -58,26 +58,46 @@
 							<artifact>target/${project.artifactId}-${project.version}-mule-application.jar</artifact>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>${app.runtime}</muleVersion>
-							<server>stericycle-anypoint</server>
-							<applicationName>${cloudhub.appname}</applicationName>
-							<environment>${cloudhub.environment}</environment>
+							<username>venkatakarthikduddu</username>
+							<password>Karthik123@Deloitte</password>
+							<!-- <server>stericycle-anypoint</server> -->
+							<applicationName>${artifactId}</applicationName>
+							<environment>Sandbox</environment>
 							<!--businessGroup>${cloudhub.businessgroups}</businessGroup-->
-							<workers>${cloudhub.worker}</workers>
-							<workerType>${cloudhub.workertype}</workerType>
+							<workers>1</workers>
+							<workerType>Micro</workerType>
 							<deploymentTimeout>100000</deploymentTimeout>
-							<region>${cloudhub.region}</region>
+							<!-- <redeploy>true</redeploy> -->
 							<properties>
-								<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com</anypoint.platform.analytics_base_uri>
-								<api.id>${cloudhub.env.autodiscovery}</api.id>
-								<anypoint.platform.client_id>${cloudhub.env.clientid}</anypoint.platform.client_id>
-								<anypoint.platform.client_secret>${cloudhub.env.clientsecret}</anypoint.platform.client_secret>
-								<anypoint.platform.base_uri>https://anypoint.mulesoft.com</anypoint.platform.base_uri>
 								<env>${env}</env>
 								<key>${key}</key>
 							</properties>
 					</cloudHubDeployment>
 				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
+			<plugin>
+		          <groupId>org.apache.maven.plugins</groupId>
+		          <artifactId>maven-install-plugin</artifactId>
+		          <configuration>
+		                    <skip>true</skip>
+		                  </configuration>
+	         </plugin>
+	         <plugin>
+		          <groupId>org.apache.maven.plugins</groupId>
+		          <artifactId>maven-deploy-plugin</artifactId>
+		          <configuration>
+		                    <skip>true</skip>
+		              </configuration>
+		     </plugin>
         </plugins>
 	</build>
 
@@ -140,5 +160,5 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+	
 </project>
