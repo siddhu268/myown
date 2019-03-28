@@ -1,0 +1,23 @@
+#%RAML 1.0
+title: exchangerate-papi
+description: Mule process API will get the exchange rates from Bloomberg API. This API contains data as daily rates and inverse rates.
+version: v1
+
+/conversion-rate:
+  description: This resource will get the exchange rates from Bloomberg system API and will the data to SAP
+  get:
+    description: Get exchange rates from BloombergAPI
+    responses:
+      200:
+        body:
+          application/json:
+            type: any
+      500:
+        body:
+          application/json:
+            type: any
+            example: |
+              {
+                "errorCdoe": "I5001",
+                "errorMessage": "Unable to fetch the exchange rates from Bloomberg API"
+              }

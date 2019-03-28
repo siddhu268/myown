@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="ba913acc-2751-4daa-84a2-4da3a722a2d2" >
+		<http:request-connection host="${connection.exchangerates.host}" port="${connection.exchangerates.port}" />
+	</http:request-config>
+	<flow name="exchangeratesFlow" doc:id="93d3aa5b-c5cb-42cb-84aa-f24ba4537382" >
+		<logger level="INFO" doc:name="Logger" doc:id="d46e6d50-3258-4476-8f71-764fac255663" message="before sending request: #[payload] #[message]"/>
+		<http:request method="GET" doc:name="Request" doc:id="ac79e178-ca22-4ead-aebd-a40a8e0622b0" config-ref="HTTP_Request_configuration" path="latest">
+			<http:query-params ><![CDATA[#[output application/java
+---
+{
+	"base" : "USD"
+}]]]></http:query-params>
+			<http:response-validator >
+				<http:success-status-code-validator values="200..599" />
+			</http:response-validator>
+		</http:request>
+		<logger level="INFO" doc:name="Exchange Rate Response Logger"
+			doc:id="19b3318a-6868-4a33-925e-a249077bb540" message="Exchange rate response from API: #[payload]" />
+		<!-- <error-handler ref="httpError_Handler" /> -->
+	</flow>
+</mule>

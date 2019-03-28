@@ -1,0 +1,10 @@
+http:
+  host: "0.0.0.0"
+  port: "40004"
+  
+connection:
+  exchangerates:
+    host: "api.exchangeratesapi.io"
+    port: "80"
+    path: "/latest"
+    timeout: "30000"
