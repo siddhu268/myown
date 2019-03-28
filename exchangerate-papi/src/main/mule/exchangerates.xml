@@ -24,5 +24,4 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 			doc:id="19b3318a-6868-4a33-925e-a249077bb540" message="Exchange rate response from API: #[payload]" />
 		<!-- <error-handler ref="httpError_Handler" /> -->
 	</flow>
-	
 </mule>
