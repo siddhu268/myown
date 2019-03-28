@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('pull') {
       steps {
-        sh 'mvn clean test -DskipTests'
+        sh 'mvn -f exchangerate-papi/pom.xml clean test -DskipTests'
       }
     }
     stage('Deploy') {
