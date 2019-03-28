@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'mvn deploy'
+        sh 'mvn -f exchangerate-papi/pom.xml deploy'
       }
     }
   }
