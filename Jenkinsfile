@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'mvn -f exchangerate-papi/pom.xml deploy'
+        sh 'mvn -f exchangerate-papi/pom.xml deploy -Dhttp.port=40005'
       }
     }
   }
