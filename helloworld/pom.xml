@@ -65,7 +65,7 @@
 					<deploymentType>cloudhub</deploymentType>
 					<redeploy>true</redeploy>
 					<applicationName>${artifactId}</applicationName>
-					<environment>Development</environment>
+					<environment>Sandbox</environment>
 					<workerType>Micro</workerType>
 					<workers>1</workers>
 				</configuration>
