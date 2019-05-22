@@ -58,8 +58,8 @@
 							<artifact>target/${project.artifactId}-${project.version}-mule-application.jar</artifact>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>${app.runtime}</muleVersion>
-							<username>venkatakarthikduddu</username>
-							<password>Karthik123@Deloitte</password>
+							<username>rajeevs8</username>
+							<password>Rahul@123</password>
 							<!-- <server>stericycle-anypoint</server> -->
 							<applicationName>${artifactId}</applicationName>
 							<environment>Sandbox</environment>
