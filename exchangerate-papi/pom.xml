@@ -60,7 +60,6 @@
 							<muleVersion>${app.runtime}</muleVersion>
 							<username>rajeevs8</username>
 							<password>Rahul@123</password>
-							<!-- <server>stericycle-anypoint</server> -->
 							<applicationName>${artifactId}</applicationName>
 							<environment>Sandbox</environment>
 							<!--businessGroup>${cloudhub.businessgroups}</businessGroup-->
